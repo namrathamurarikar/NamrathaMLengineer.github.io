@@ -54,15 +54,14 @@
     <header class="major">
         <h2><a href="https://github.com/namrathamurarikar/Nam-Bot">Nam's Bot:<br />
         A Multi-Persona Chat Bot</a></h2>
-        <p>A versatile chatbot that lets you switch between world-class AI models from OpenAI and Anthropic, or run open-source models locally using Ollama.</p>
+        <p>A versatile chatbot that lets you switch between AI models from OpenAI and Anthropic.</p>
     </header>
 
     <div class="image main" id="video-container" style="cursor: pointer; position: relative;">
         <img src="images/Nam'sBot-1.png" id="video-placeholder" alt="Project Preview" style="display: block; width: 100%;">
         
-        <video id="project-video" width="100%" height="auto" loop muted playsinline style="display: none; border-radius: 8px;">
+        <video id="project-video" width="100%" height="auto" loop muted playsinline controls style="display: none; border-radius: 8px;">
             <source src="assets/videos/Nams-Bot.mp4" type="video/mp4">
-            Your browser does not support the video tag.
         </video>
     </div>
 
@@ -75,12 +74,18 @@
             var img = document.getElementById('video-placeholder');
             var video = document.getElementById('project-video');
 
-            // Hide image and show video
             img.style.display = 'none';
             video.style.display = 'block';
             
-            // Play the video
+            // Play and Request Fullscreen
             video.play();
+            if (video.requestFullscreen) {
+                video.requestFullscreen();
+            } else if (video.webkitRequestFullscreen) { /* Safari */
+                video.webkitRequestFullscreen();
+            } else if (video.msRequestFullscreen) { /* IE11 */
+                video.msRequestFullscreen();
+            }
         });
     </script>
 </article>

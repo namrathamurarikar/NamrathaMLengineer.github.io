@@ -99,18 +99,37 @@
 									</ul>
 								</article>
 								<article>
-									<header>
-										
-										<h2><a href="https://github.com/namrathamurarikar/AI-Powered-Code-Review-Assistant">AI-Powered Code Review Assistant<br />
-										LLM + VCS Integrations</a></h2>
-									</header>
-									<a href="https://github.com/namrathamurarikar/AI-Powered-Code-Review-Assistant" class="image fit"><img src="images/AI-Codereview.png" alt="" /></a>
-									<p>An end-to-end AI code review engine featuring LangChain-based reasoning and GitHub CI integration to automate security auditing and architectural pattern detection.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/namrathamurarikar/AI-Powered-Code-Review-Assistant" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
+    <header>
+        <h2><a href="https://github.com/namrathamurarikar/AI-Powered-Code-Review-Assistant">AI-Powered Code Review Assistant<br />
+        LLM + VCS Integrations</a></h2>
+    </header>
+    
+    <div class="image fit" id="code-review-container" style="cursor: pointer; position: relative;">
+        <img src="images/AI-Codereview.png" id="code-review-placeholder" alt="AI Code Review Preview" style="display: block; width: 100%;">
+        
+        <video id="code-review-video" width="100%" height="auto" loop muted playsinline style="display: none; border-radius: 8px;">
+            <source src="assets/videos/AI-Code review (1).mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <p>An end-to-end AI code review engine featuring LangChain-based reasoning and GitHub CI integration to automate security auditing and architectural pattern detection.</p>
+    
+    <ul class="actions special">
+        <li><a href="https://github.com/namrathamurarikar/AI-Powered-Code-Review-Assistant" class="button">Full Story</a></li>
+    </ul>
+
+    <script>
+        document.getElementById('code-review-container').addEventListener('click', function() {
+            var img = document.getElementById('code-review-placeholder');
+            var video = document.getElementById('code-review-video');
+
+            img.style.display = 'none';
+            video.style.display = 'block';
+            video.play();
+        });
+    </script>
+</article>
 									<header>
 										
 										<h2><a href="https://github.com/namrathamurarikar/Research-Paper">Research Papers<br />
